@@ -1,8 +1,11 @@
-var labs;
+var places;
 
-var laboratory = L.MakiMarkers.icon({color: "#5c73a8", size: "m"}); //#b01217
-//laranja #fc7814
-//azuk 5c73a8
+var icons = {
+  "laboratory" : L.MakiMarkers.icon({color: "#5c73a8", size: "m"}), //azul escuro
+  "education"  : L.MakiMarkers.icon({color: "#05a6eb", size: "m"}), //azul claro
+  "art"        : L.MakiMarkers.icon({color: "#05a6eb", size: "m"})  //azul claro
+}
+
 var mainmap = L.map('mainmap').setView([-23.550190, -46.633357], 11);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -31,10 +34,9 @@ function loadJSONfile(callback) {
 $(document).ready(function() {
 
   loadJSONfile(function(response){
-		labs = JSON.parse(response);
-    for (lab in labs) {
-
-      L.marker([labs[lab].latitude, labs[lab].longitude], {icon: laboratory}).addTo(mainmap);
+		places = JSON.parse(response);
+    for (place in places) {
+      L.marker([places[place].latitude, places[place].longitude], {icon: icons[places[place].category]}).addTo(mainmap);
     }
 	});
 

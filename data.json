@@ -1,86 +1,86 @@
 [
   {
-    "nome" : "Fab Lab Cidade Tiradentes",
-    "endereco" : "Av. Inácio Monteiro, 6900, Cidade Tiradentes",
+    "name" : "Fab Lab Cidade Tiradentes",
+    "address" : "Av. Inácio Monteiro, 6900, Cidade Tiradentes",
     "latitude" : -23.5801259,
     "longitude" : -46.3898429,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab CEU Heliópolis",
-    "endereco" : "",
+    "name" : "Fab Lab CEU Heliópolis",
+    "address" : "",
     "latitude" : -23.6221722,
     "longitude" : -46.5907948,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab Chácara do Jóckey",
-    "endereco" : "",
+    "name" : "Fab Lab Chácara do Jóckey",
+    "address" : "",
     "latitude" : -23.5982488,
     "longitude" : -46.7443205,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab Vila Itororó",
-    "endereco" : "",
+    "name" : "Fab Lab Vila Itororó",
+    "address" : "",
     "latitude" : -23.561983,
     "longitude" : -46.6410815,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab Galeria Olido",
-    "endereco" : "",
+    "name" : "Fab Lab Galeria Olido",
+    "address" : "",
     "latitude" : -23.5434534,
     "longitude" : -46.6390541,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab Itaquera",
-    "endereco" : "",
+    "name" : "Fab Lab Itaquera",
+    "address" : "",
     "latitude" : -23.5357699,
     "longitude" : -46.45534070000001,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab Penha",
-    "endereco" : "",
+    "name" : "Fab Lab Penha",
+    "address" : "",
     "latitude" : -23.5258714,
     "longitude" : -46.5484253,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab CCSP",
-    "endereco" : "",
+    "name" : "Fab Lab CCSP",
+    "address" : "",
     "latitude" : -23.5714751,
     "longitude" : -46.6402144,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab São Joaquim",
-    "endereco" : "",
+    "name" : "Fab Lab São Joaquim",
+    "address" : "",
     "latitude" : -23.6869926,
     "longitude" : -46.7495015,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab CEU Anhanguera",
-    "endereco" : "",
+    "name" : "Fab Lab CEU Anhanguera",
+    "address" : "",
     "latitude" : -23.4397843,
     "longitude" : -46.7871379,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab CCJ",
-    "endereco" : "",
+    "name" : "Fab Lab CCJ",
+    "address" : "",
     "latitude" : -23.4760977,
     "longitude" : -46.6702593,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   },
   {
-    "nome" : "Fab Lab CEU 3 Pontes",
-    "endereco" : "",
+    "name" : "Fab Lab CEU 3 Pontes",
+    "address" : "",
     "latitude" : -23.478372,
     "longitude" : -46.3813019,
-    "categoria" : "Laboratório"
+    "category" : "laboratory"
   }
 ]
