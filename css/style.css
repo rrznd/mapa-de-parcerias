@@ -17,7 +17,7 @@ body {
   left: 30px;
   width: 25vw;
   color: #fff;
-  background-color: #b2b2b2;
+  background-color: rgba(96, 67, 133, 1);
   padding: 20px;
   box-shadow: 0 0 25px rgba(0, 0, 0, .3);
 }
@@ -25,4 +25,12 @@ body {
 h1 {
   font-size: 20px;
   margin: 0 0 12px 0;
+}
+
+.leaflet-marker-pane {
+  opacity: 0;
+}
+
+.leaflet-shadow-pane {
+  opacity: 0;
 }

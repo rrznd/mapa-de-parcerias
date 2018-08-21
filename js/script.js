@@ -24,10 +24,15 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 mainmap.zoomControl.setPosition('topright');
 
-for (lab in labs) {
-    L.marker(labs[lab]).addTo(mainmap);
-}
+$(document).ready(function() {
 
-$( document ).ready(function() {
-	$("#info").delay(500).animate({"opacity" : 1}, 800);
+  for (lab in labs) {
+      L.marker(labs[lab]).addTo(mainmap);
+  }
+
+  $(".leaflet-marker-pane").delay(700).animate({"opacity" : 1}, {duration: 800, complete: function() {
+    $(".leaflet-shadow-pane").delay(100).animate({"opacity" : 1}, {duration: 500, complete: function() {
+        $("#info").animate({"opacity" : 1}, 800);
+    }});
+  }});
 });
