@@ -1,3 +1,86 @@
-{
-  
-}
+[
+  {
+    "nome" : "Fab Lab Cidade Tiradentes",
+    "endereco" : "Av. Inácio Monteiro, 6900, Cidade Tiradentes",
+    "latitude" : -23.5801259,
+    "longitude" : -46.3898429,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab CEU Heliópolis",
+    "endereco" : "",
+    "latitude" : -23.6221722,
+    "longitude" : -46.5907948,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab Chácara do Jóckey",
+    "endereco" : "",
+    "latitude" : -23.5982488,
+    "longitude" : -46.7443205,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab Vila Itororó",
+    "endereco" : "",
+    "latitude" : -23.561983,
+    "longitude" : -46.6410815,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab Galeria Olido",
+    "endereco" : "",
+    "latitude" : -23.5434534,
+    "longitude" : -46.6390541,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab Itaquera",
+    "endereco" : "",
+    "latitude" : -23.5357699,
+    "longitude" : -46.45534070000001,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab Penha",
+    "endereco" : "",
+    "latitude" : -23.5258714,
+    "longitude" : -46.5484253,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab CCSP",
+    "endereco" : "",
+    "latitude" : -23.5714751,
+    "longitude" : -46.6402144,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab São Joaquim",
+    "endereco" : "",
+    "latitude" : -23.6869926,
+    "longitude" : -46.7495015,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab CEU Anhanguera",
+    "endereco" : "",
+    "latitude" : -23.4397843,
+    "longitude" : -46.7871379,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab CCJ",
+    "endereco" : "",
+    "latitude" : -23.4760977,
+    "longitude" : -46.6702593,
+    "categoria" : "Laboratório"
+  },
+  {
+    "nome" : "Fab Lab CEU 3 Pontes",
+    "endereco" : "",
+    "latitude" : -23.478372,
+    "longitude" : -46.3813019,
+    "categoria" : "Laboratório"
+  }
+]

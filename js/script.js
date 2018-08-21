@@ -1,18 +1,8 @@
-labs = [
-  [-23.5801259, -46.3898429],
-  [-23.6221722, -46.5907948],
-  [-23.5982488, -46.7443205],
-  [-23.561983, -46.6410815],
-  [-23.5434534, -46.6390541],
-  [-23.5357699, -46.45534070000001],
-  [-23.5258714, -46.5484253],
-  [-23.5714751, -46.6402144],
-  [-23.6869926, -46.7495015],
-  [-23.4397843, -46.7871379],
-  [-23.4760977, -46.6702593],
-  [-23.478372, -46.3813019]
-]
+var labs;
 
+var laboratory = L.MakiMarkers.icon({color: "#5c73a8", size: "m"}); //#b01217
+//laranja #fc7814
+//azuk 5c73a8
 var mainmap = L.map('mainmap').setView([-23.550190, -46.633357], 11);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -24,15 +14,31 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 mainmap.zoomControl.setPosition('topright');
 
+function loadJSONfile(callback) {
+
+	var request = new XMLHttpRequest();
+	request.overrideMimeType("application/json");
+	request.open('GET', 'data.json', true);
+	request.onreadystatechange = function () {
+		if (request.readyState == 4 && request.status == 200) {
+			callback(request.responseText);
+		}
+	}
+
+	request.send(null);
+}
+
 $(document).ready(function() {
 
-  for (lab in labs) {
-      L.marker(labs[lab]).addTo(mainmap);
-  }
+  loadJSONfile(function(response){
+		labs = JSON.parse(response);
+    for (lab in labs) {
+
+      L.marker([labs[lab].latitude, labs[lab].longitude], {icon: laboratory}).addTo(mainmap);
+    }
+	});
 
   $(".leaflet-marker-pane").delay(700).animate({"opacity" : 1}, {duration: 800, complete: function() {
-    $(".leaflet-shadow-pane").delay(100).animate({"opacity" : 1}, {duration: 500, complete: function() {
-        $("#info").animate({"opacity" : 1}, 800);
-    }});
+    $("#info").delay(100).animate({"opacity" : 1}, 800);
   }});
 });
