@@ -44,3 +44,17 @@ body {
 .leaflet-shadow-pane {
   opacity: 0;
 }
+
+.leaflet-popup {
+  font-family: Share Tech Mono, monospace;
+}
+
+.leaflet-popup-tip {
+  background-color: rgba(92, 115, 168, 1);
+}
+
+.leaflet-popup-content-wrapper {
+  color: #fff;
+  border-radius: 0;
+  background-color: rgba(92, 115, 168, 1);
+}

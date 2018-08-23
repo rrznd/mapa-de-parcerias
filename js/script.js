@@ -1,4 +1,5 @@
 var places;
+var markers = [];
 
 var icons = {
   "laboratory" : L.MakiMarkers.icon({color: "#5c73a8", size: "m"}), //azul escuro
@@ -31,16 +32,28 @@ function loadJSONfile(callback) {
 	request.send(null);
 }
 
+var teste;
 $(document).ready(function() {
 
   loadJSONfile(function(response){
 		places = JSON.parse(response);
     for (place in places) {
-      L.marker([places[place].latitude, places[place].longitude], {icon: icons[places[place].category]}).addTo(mainmap);
+      markers.push(L.marker([places[place].latitude, places[place].longitude], {icon: icons[places[place].category]}).addTo(mainmap));
+      places[place]["leaflet_id"] = markers[place]._leaflet_id;
     }
 	});
 
   $(".leaflet-marker-pane").delay(700).animate({"opacity" : 1}, {duration: 800, complete: function() {
-    $("#info").delay(100).animate({"opacity" : 1}, 800);
+    $("#info").delay(100).animate({"opacity" : 1}, {duration: 800, complete: function() {
+      $(markers).on("click", function(e){
+        L.popup({
+          closeButton: false,
+          autoClose: false
+        })
+        .setLatLng([e.target._latlng.lat+0.022, e.target._latlng.lng+0.001])
+        .setContent("HI, I AM A TEST.")
+        .openOn(mainmap);
+      })
+    }});
   }});
 });
