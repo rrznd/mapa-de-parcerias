@@ -2,9 +2,13 @@ var places;
 var markers = [];
 
 var icons = {
-  "laboratory" : L.MakiMarkers.icon({color: "#5c73a8", size: "m"}), //azul escuro
-  "education"  : L.MakiMarkers.icon({color: "#05a6eb", size: "m"}), //azul claro
-  "art"        : L.MakiMarkers.icon({color: "#05a6eb", size: "m"})  //azul claro
+  "laboratorio"     : "#5c73a8", //azul escuro
+  "educacaopublica" : "#05a6eb", //azul claro
+  "educacaoprivada" : "#05a6eb", //azul claro
+  "setorpublico"    : "#05a6eb", //azul claro
+  "coletivo"        : "#05a6eb", //azul claro
+  "ong"             : "#05a6eb", //azul claro
+  "empresa"         : "#05a6eb"  //azul claro
 }
 
 var mainmap = L.map('mainmap').setView([-23.550190, -46.633357], 11);
@@ -19,7 +23,6 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 mainmap.zoomControl.setPosition('topright');
 
 function loadJSONfile(callback) {
-
 	var request = new XMLHttpRequest();
 	request.overrideMimeType("application/json");
 	request.open('GET', 'data.json', true);
@@ -32,26 +35,25 @@ function loadJSONfile(callback) {
 	request.send(null);
 }
 
-var teste;
 $(document).ready(function() {
-
   loadJSONfile(function(response){
 		places = JSON.parse(response);
     for (place in places) {
-      markers.push(L.marker([places[place].latitude, places[place].longitude], {icon: icons[places[place].category]}).addTo(mainmap));
-      places[place]["leaflet_id"] = markers[place]._leaflet_id;
+      markers.push(L.marker([places[place].latitude, places[place].longitude], {icon: L.MakiMarkers.icon({color: icons[places[place].category], size: "m"})}).addTo(mainmap));
     }
 	});
 
-  $(".leaflet-marker-pane").delay(700).animate({"opacity" : 1}, {duration: 800, complete: function() {
-    $("#info").delay(100).animate({"opacity" : 1}, {duration: 800, complete: function() {
+  $("#info").delay(700).animate({"opacity" : 1}, {duration: 800, complete: function() {
+    $(".leaflet-marker-pane").delay(100).animate({"opacity" : 1}, {duration: 800, complete: function() {
       $(markers).on("click", function(e){
+        //armazena o index do item clicado
+        var index = $(markers).index(this);
         L.popup({
           closeButton: false,
           autoClose: false
         })
-        .setLatLng([e.target._latlng.lat+0.022, e.target._latlng.lng+0.001])
-        .setContent("HI, I AM A TEST.")
+        .setLatLng([e.target._latlng.lat, e.target._latlng.lng])
+        .setContent(places[index].name.toUpperCase() + "<br>" + places[index].address)
         .openOn(mainmap);
       })
     }});
