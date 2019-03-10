@@ -1,13 +1,13 @@
 var places;
 var markers = [];
 
-var mainmap = L.map('mainmap').setView([-23.550190, -46.633357], 6);
+var mainmap = L.map('mainmap').setView([11.528956, -8.373501], 2.5);
 
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18,
     id: 'mapbox.outdoors',
-    accessToken: 'pk.eyJ1IjoiZmFibGFibGl2cmVzcCIsImEiOiJjamt5NGE2NnQwZmtpM3FsN3FqcW0wamRxIn0.o8WeEKKTVHgdYL_MaqtZ7g'
+    accessToken: 'pk.eyJ1IjoiY2hhbWFub2lzIiwiYSI6ImNqdDAzdnJveTBzMjQ0OXBocTJhZXl2dzEifQ.4lFsq3gcP4x8Zz3-ybQAUw'
 }).addTo(mainmap);
 
 mainmap.zoomControl.setPosition('topright');
@@ -34,7 +34,7 @@ $(document).ready(function() {
       })
       .setLatLng([e.target._latlng.lat, e.target._latlng.lng])
       .setContent(places[index].name.toUpperCase() + "<br>" + places[index].address)
-      .openOn(mainmap);
+      //.openOn(mainmap);
     })
   }});
 })
