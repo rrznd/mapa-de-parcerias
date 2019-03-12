@@ -19,9 +19,12 @@ $(document).ready(function() {
 
   $.getJSON(sheetUrl, function(data){
     places = data.feed.entry;
+    console.log(places);
 
     for (i = 2; i < places.length; i+=2) {
-      markers.push(L.marker([places[i].content["$t"], places[i+1].content["$t"]], {icon: L.MakiMarkers.icon({color: "#5c73a8", size: "m"})}).addTo(mainmap));
+      if (places[i].content["$t"] !== "") {
+        markers.push(L.marker([places[i].content["$t"], places[i+1].content["$t"]], {icon: L.MakiMarkers.icon({color: "#5c73a8", size: "m"})}).addTo(mainmap));
+      }
     }
 
   $(".leaflet-marker-pane").delay(50).animate({"opacity" : 1}, {duration: 800, complete: function() {
