@@ -50,11 +50,11 @@ body {
 }
 
 .leaflet-popup-tip {
-  background-color: rgba(92, 115, 168, 1);
+  background-color: #0f196b;
 }
 
 .leaflet-popup-content-wrapper {
   color: #fff;
   border-radius: 0;
-  background-color: rgba(92, 115, 168, 1);
+  background-color: #0f196b;
 }

@@ -23,7 +23,7 @@ $(document).ready(function() {
 
     for (i = 0; i < places.length; i+=3) {
       if (places[i].content["$t"] !== "") {
-        markers.push(L.marker([places[i].content["$t"], places[i+1].content["$t"]], {icon: L.MakiMarkers.icon({color: "#5c73a8", size: "m"})}).addTo(mainmap));
+        markers.push(L.marker([places[i].content["$t"], places[i+1].content["$t"]], {icon: L.MakiMarkers.icon({color: "#0f196b", size: "m"})}).addTo(mainmap));
       }
     }
 
